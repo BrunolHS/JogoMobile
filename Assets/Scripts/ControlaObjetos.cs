@@ -6,8 +6,13 @@ public class ControlaObjetos : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    public GameObject Inimigo;
+
+    public GameObject Dinheiro;
+
     public List<GameObject> MeuObjeto;
-    public float meuTempo;
+   
+    public float meuTempo = 0;
 
     void Start()
     {
@@ -17,6 +22,9 @@ public class ControlaObjetos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Temporizador();
+
         meuTempo += Time.deltaTime;
         if(meuTempo > 0.7f) 
         
@@ -41,4 +49,25 @@ public class ControlaObjetos : MonoBehaviour
         }
        
     }
+
+    void Temporizador()
+    {
+        meuTempo += Time.deltaTime;
+        if(meuTempo > 3)
+        {
+            meuTempo = 0;
+            CriaInimigos();
+        }
+    }
+
+    void CriaInimigos()
+    {
+
+        float posX = Random.Range(-2.5f, 2.5f);
+        Vector3 posInicial = new Vector3(posX, 6, 0);
+        GameObject MeuInimigo = Instantiate(Inimigo, posInicial, Quaternion.identity);
+        Destroy(MeuInimigo, 3f);
+
+    }
+
 }
