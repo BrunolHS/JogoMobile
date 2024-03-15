@@ -6,7 +6,9 @@ public class ControlaObjetos : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public GameObject Inimigo;
+    public GameObject Obstaculo;
+
+    public GameObject Obstaculo2;
 
     public GameObject Dinheiro;
 
@@ -39,10 +41,10 @@ public class ControlaObjetos : MonoBehaviour
             
             int indicador = Random.Range(0, MeuObjeto.Count);
 
-            GameObject Bosta = Instantiate(MeuObjeto[indicador], novaPos, Quaternion.identity);
+            GameObject MeuObstaculo = Instantiate(MeuObjeto[indicador], novaPos, Quaternion.identity);
 
-            // Destruir Inimigo
-            Destroy(Bosta, 3f);
+            // Destruir Obstaculo
+            Destroy(MeuObstaculo, 3f);
             
             meuTempo = 0;
 
@@ -53,20 +55,42 @@ public class ControlaObjetos : MonoBehaviour
     void Temporizador()
     {
         meuTempo += Time.deltaTime;
+        
         if(meuTempo > 3)
         {
             meuTempo = 0;
-            CriaInimigos();
+
+            float chance = Random.Range(0, 5);
+            if(chance <= 5)
+            {
+                CriaObstaculo();
+            }
+            else
+            {
+                CriaDinheiro();
+            }
+
+            
         }
     }
 
-    void CriaInimigos()
+    void CriaObstaculo()
     {
 
         float posX = Random.Range(-2.5f, 2.5f);
         Vector3 posInicial = new Vector3(posX, 6, 0);
-        GameObject MeuInimigo = Instantiate(Inimigo, posInicial, Quaternion.identity);
-        Destroy(MeuInimigo, 3f);
+        GameObject MeuObstaculo = Instantiate(Obstaculo, posInicial, Quaternion.identity);
+        Destroy(MeuObstaculo, 3f);
+
+    }
+
+    void CriaDinheiro()
+    {
+
+        float posX = Random.Range(-2.5f, 2.5f);
+        Vector3 posInicial = new Vector3(posX, 6, 0);
+        GameObject MeuDinheiro = Instantiate(Dinheiro, posInicial, Quaternion.identity);
+        Destroy(MeuDinheiro, 3f);
 
     }
 

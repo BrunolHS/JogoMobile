@@ -376,11 +376,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e58eaad0546a0d4dbbc7218a81ab581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Inimigo: {fileID: 0}
-  Dinheiro: {fileID: 0}
+  Obstaculo: {fileID: 4886247149968507214, guid: cb95ecddc4c3dc949aa6719f95d0cf1b, type: 3}
+  Obstaculo2: {fileID: 4408945812461674686, guid: 1b80f21f8896e0d488cd762192643051, type: 3}
+  Dinheiro: {fileID: 9137818073497247089, guid: 9b5d4d0628fcf3e4f8cebbbf7eb85cd0, type: 3}
   MeuObjeto:
-  - {fileID: 1257089774626909120, guid: 2e445c5ae68920b48a2d848977ab9473, type: 3}
-  - {fileID: 7098345237006681184, guid: 59eed120c26b3544d82b8f7aa86c98d2, type: 3}
+  - {fileID: 4886247149968507214, guid: cb95ecddc4c3dc949aa6719f95d0cf1b, type: 3}
+  - {fileID: 4408945812461674686, guid: 1b80f21f8896e0d488cd762192643051, type: 3}
+  - {fileID: 9137818073497247089, guid: 9b5d4d0628fcf3e4f8cebbbf7eb85cd0, type: 3}
   meuTempo: 0
 --- !u!1 &364818284
 GameObject:
@@ -1575,6 +1577,8 @@ GameObject:
   - component: {fileID: 1303286594}
   - component: {fileID: 1303286593}
   - component: {fileID: 1303286592}
+  - component: {fileID: 1303286595}
+  - component: {fileID: 1303286596}
   m_Layer: 0
   m_Name: Aviao
   m_TagString: Player
@@ -1694,6 +1698,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1303286595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303286591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be93ad2b50ae264c9d016e2df38d038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1303286596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303286591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf70cdb8e416634da778625f5754c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 5
+  dinheiro: 0
 --- !u!1 &1312443975
 GameObject:
   m_ObjectHideFlags: 0
