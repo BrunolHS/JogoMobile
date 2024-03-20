@@ -4,16 +4,24 @@ using UnityEngine;
 
 public class MoverAviao : MonoBehaviour
 {
+
+
+    private GerenciadorDeJogo GJ;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        GJ = GameObject.FindGameObjectWithTag("GameController").GetComponent<GerenciadorDeJogo>(); 
     }
 
     // Update is called once per frame
     void Update()
     {
-        Movimentar();
+        if(GJ.EstadoDoJogo() == true)
+        {
+           Movimentar();
+        }
+        
     }
 
     void Movimentar()

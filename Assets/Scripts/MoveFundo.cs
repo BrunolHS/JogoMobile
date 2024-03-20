@@ -19,7 +19,7 @@ public class MoveFundo : MonoBehaviour
         meuTempo += Time.deltaTime;
         
         //avança pelo tempo
-        if (meuTempo > 0.0001f)
+        if (meuTempo > 0.000000001f)
         {
             transform.position = transform.position + new Vector3(0,-0.01f, 0);
             meuTempo = 0;

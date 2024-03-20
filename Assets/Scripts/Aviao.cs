@@ -7,11 +7,12 @@ public class Aviao : MonoBehaviour
 
     public int vida = 5;
     public int dinheiro = 0;
+    private GerenciadorDeJogo GJ;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        GJ = GameObject.FindGameObjectWithTag("GameController").GetComponent<GerenciadorDeJogo>();
     }
 
     // Update is called once per frame
@@ -21,7 +22,7 @@ public class Aviao : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D colisao)
+    void OnCollisionEnter2D(Collision2D colisao)
     {
         if (colisao.gameObject.tag == "obstaculo")
         {
@@ -29,7 +30,7 @@ public class Aviao : MonoBehaviour
             vida--;
             if (vida <= 0)
             {
-                Debug.Log("Morreu");
+                GJ.Morreu();
             }
         }
 
