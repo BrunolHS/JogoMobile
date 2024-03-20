@@ -18,10 +18,12 @@ public class ControlaObjetos : MonoBehaviour
 
     private GerenciadorDeJogo GJ;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
-        GJ = GameObject.FindGameObjectWithTag("GameController").GetComponent<GerenciadorDeJogo>();
+        GJ = GameObject.FindGameObjectWithTag("GameController").GetComponent<GerenciadorDeJogo>();      
     }
 
     // Update is called once per frame

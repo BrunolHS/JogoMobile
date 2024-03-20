@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4707922241780433489}
   - component: {fileID: 7785334200909686786}
   - component: {fileID: 6945325527381508051}
+  - component: {fileID: 6472244791797531007}
   m_Layer: 0
   m_Name: obstaculo 2
   m_TagString: obstaculo
@@ -148,3 +149,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
+--- !u!114 &6472244791797531007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4408945812461674686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f18e96731fd2c4fa220584ce1efa96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  pontos: 0
+  Explosao: {fileID: 0}
+  Moeda: {fileID: 0}
