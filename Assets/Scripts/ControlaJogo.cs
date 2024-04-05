@@ -6,6 +6,7 @@ public class ControlaJogo : MonoBehaviour
 {
     public float pontos;
     public float moedas;
+    public bool jogoON = false;
 
     private void Start()
     {
@@ -35,5 +36,16 @@ public class ControlaJogo : MonoBehaviour
         moedas = moedas + novamoeda;
         PlayerPrefs.SetFloat("Moeda", moedas);
     }
+
+    public void IniciarJogo()
+    {
+        jogoON = true;
+    }
+
+    public bool EstadoDoJogo()
+    {
+        return jogoON;
+    }
+
 
 }

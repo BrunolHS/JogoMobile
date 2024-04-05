@@ -18,9 +18,13 @@ public class Nave : MonoBehaviour
 
     private void Update()
     {
-        SeguirDedo();
-        Disparar();
-        EscolherNave();
+        if (CJ.EstadoDoJogo() == true)
+        {
+            SeguirDedo();
+            Disparar();
+            EscolherNave();
+        }
+        
     }
 
 

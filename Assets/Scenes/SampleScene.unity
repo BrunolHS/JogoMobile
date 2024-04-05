@@ -1213,6 +1213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pontos: 0
   moedas: 0
+  jogoON: 0
 --- !u!4 &650683199
 Transform:
   m_ObjectHideFlags: 0
@@ -1670,7 +1671,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 300162157}
+      - m_Target: {fileID: 1932649803}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2510,8 +2511,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 650683200}
-        m_TargetAssemblyTypeName: GerenciadorDeJogo, Assembly-CSharp
+      - m_Target: {fileID: 650683198}
+        m_TargetAssemblyTypeName: ControlaJogo, Assembly-CSharp
         m_MethodName: IniciarJogo
         m_Mode: 1
         m_Arguments:
@@ -3827,7 +3828,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1000
   m_TargetDisplay: 0
 --- !u!224 &1881498227
 RectTransform:
@@ -3841,11 +3842,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 736758015}
   - {fileID: 300162158}
   - {fileID: 1932649804}
   - {fileID: 1282906326}
   - {fileID: 2096215792}
-  - {fileID: 736758015}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
