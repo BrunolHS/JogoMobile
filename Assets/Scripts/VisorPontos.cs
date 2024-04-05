@@ -14,7 +14,7 @@ public class VisorPontos : MonoBehaviour
                  GetComponent<ControlaJogo>();
         meuTexto = GetComponent<TMP_Text>();
     }
-
+    //dedede
     void Update()
     {
         meuTexto.text = ": " + CJ.pontos.ToString();

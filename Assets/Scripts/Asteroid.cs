@@ -27,11 +27,10 @@ public class Asteroid : MonoBehaviour
             //Cria Moeda
             GameObject Moedinha = Instantiate(Moeda, transform.position,
                 Quaternion.identity);
-            //Destroi explosão
-            Destroy(Moedinha, 1f);
+            //Destroi Moeda
+            Destroy(Moedinha, 5f);
+
             //AutoDestroi Asteroid
-
-
             Destroy(gameObject);
         }
 

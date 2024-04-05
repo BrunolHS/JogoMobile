@@ -4,30 +4,44 @@ using UnityEngine;
 
 public class MoveFundo : MonoBehaviour
 {
-    public GameObject irmao;
-    public float meuTempo;
-    public float ajuste;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
+    public float meuTempo;
+    public GameObject irmao;
+    public float ajuste;
     // Update is called once per frame
     void Update()
     {
         meuTempo += Time.deltaTime;
-        
-        //avança pelo tempo
-        if (meuTempo > 0.000000001f)
+        /*//avança pelo tempo
+        if (meuTempo > 0.01f)
         {
-            transform.position = transform.position + new Vector3(0,-0.01f, 0);
+            transform.position = transform.position +
+                new Vector3(0, -0.01f, 0);
             meuTempo = 0;
         }
-        //mudaposição
-        if(transform.position.y < -14)
+        //mudaposicao
+        if (transform.position.y < -14)
         {
-            transform.position = new Vector3(0, irmao.transform.position.y + 43, 0);
-        }     
+            transform.position = new Vector3(0, irmao.transform.position.y + 23, 0);
+
+        }*/
+
+
     }
+
+    private void FixedUpdate()
+    {
+        if (meuTempo > 0.000000001f)
+        {
+            transform.position = transform.position +
+                new Vector3(0, -0.01f, 0);
+            meuTempo = 0;
+        }
+        if (transform.position.y < -14)
+        {
+            transform.position = new Vector3(0, irmao.transform.position.y + 23, 0);
+
+        }
+    }
+
 }

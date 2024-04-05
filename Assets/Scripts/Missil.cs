@@ -8,7 +8,7 @@ public class Missil : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D colidiu)
     {
-        if (colidiu.gameObject.tag == "obstaculo")
+        if (colidiu.gameObject.tag == "Asteroid")
         {
             colidiu.gameObject.GetComponent<Asteroid>().TomouDano(dano);
             Destroy(gameObject);

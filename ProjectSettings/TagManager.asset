@@ -4,8 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - obstaculo
   - dinheiro
+  - Moeda
+  - Asteroid
   layers:
   - Default
   - TransparentFX

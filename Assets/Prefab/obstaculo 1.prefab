@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2651422302753887752}
   m_Layer: 0
   m_Name: obstaculo 1
-  m_TagString: obstaculo
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f18e96731fd2c4fa220584ce1efa96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
-  pontos: 0
-  Explosao: {fileID: 0}
-  Moeda: {fileID: 0}
+  hp: 1
+  pontos: 10
+  Explosao: {fileID: 3308281666907242994, guid: 522323d022e383740b01a74eaaf59090, type: 3}
+  Moeda: {fileID: 423287641731026533, guid: 05784d99bf30cf74f9c6374b1ea07fa5, type: 3}
