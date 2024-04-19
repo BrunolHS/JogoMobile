@@ -26,7 +26,7 @@ public class Nave : MonoBehaviour
         }
         
     }
-
+    //batata
 
     public void EscolherNave()
     {
