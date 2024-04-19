@@ -14,5 +14,6 @@ public class Missil : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    //gerger
 
 }
